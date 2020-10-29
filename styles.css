@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #06031d;
+}
+
+.bday{
+    margin-top: 50px;
+    text-align: center;
+    background: linear-gradient(180deg,#f80112 0%,#2602f5 110%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+    cursor: pointer;
+    font-family: bday;
+}
+.name{
+    margin-top: 50px;
+    text-align: center;
+    background: linear-gradient(180deg,#f80112 0%,#2602f5 110%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+    cursor: pointer;
+    font-family: bday;
+}
+.wrapper{
+    position: relative;
+    width: 320px;
+    margin: 50px auto;
+    perspective: 1000px;
+    margin-bottom: 500px;
+}
+.img-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 25s steps(1000,end) infinite;
+}
+.single-image{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 10px;
+    left: 10px;
+}
+.single-image img{
+    width: 300px;
+    height: 200px;
+    border: 5px solid white;
+}
+.single-image.image-one{
+    transform: rotateY(0deg) translateZ(300px);
+}
+.single-image.image-two{
+    transform: rotateY(60deg) translateZ(300px);
+}
+.single-image.image-three{
+    transform: rotateY(120deg) translateZ(300px);
+}
+.single-image.image-four{
+    transform: rotateY(180deg) translateZ(300px);
+}
+.single-image.image-five{
+    transform: rotateY(2400deg) translateZ(300px);
+}
+.single-image.image-six{
+    transform: rotateY(300deg) translateZ(300px);
+}
+img{
+    filter: grayscale(90%);
+    transition: 1s;
+    cursor: pointer;
+}
+img:hover{
+    transition: 1s;
+    filter: grayscale(0);
+}
+@keyframes animate{
+    from{
+        transform: rotateY(-360deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
+@font-face{
+    font-family: bday;
+    src: url(bday.ttf);
+}
