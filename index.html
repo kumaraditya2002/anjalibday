@@ -51,7 +51,23 @@
         </figure>
         <figure class="swing">
             <img src="img/uryan.jpeg" alt="" id="uryan" height="400px" width="300px">
-        </figure>
+        </figure>   
     </div>
+    <section>
+        <video id="slider" controls="controls" autoplay loop>
+            <source src="videos/Pratishtha-1.m4v" type="video/mp4"> 
+        </video>
+        <ul class="nav">
+            <li onclick="vidurl('videos/Pratishtha-1.m4v')"><img src="img/prati-vid.png" alt="" width="150px" height="150px"></li>
+            <li onclick="vidurl('videos/hardik.mp4')"><img src="img/hardik-vid.png" alt="" width="150px" height="150px"></li>
+            <li onclick="vidurl('videos/priyal.mp4')"><img src="img/priyal-vid.jpeg" alt="" width="150px" height="150px"></li>
+            <li onclick="vidurl('videos/peda.mp4')"><img src="img/peda-vid.png" alt="" width="150px" height="150px"></li>
+        </ul>
+    </section>
+    <script>
+        function vidurl(url){
+            document.getElementById('slider').src = url;
+        }
+    </script>
 </body>
 </html>
